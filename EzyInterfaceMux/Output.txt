@@ -1,0 +1,27 @@
+Parsing input file for interface: myBus
+always @(*)
+begin
+        case(sel)
+                2'b00:
+                                Bus3.a  =  Bus1.a;
+                                Bus3.b  =  Bus1.b;
+                                Bus3.c  =  Bus1.c;
+                2'b01:
+                                Bus3.a  =  Bus2.a;
+                                Bus3.b  =  Bus2.b;
+                                Bus3.c  =  Bus2.c;
+                2'b10:
+                                Bus3.a  =  Bus3.a;
+                                Bus3.b  =  Bus3.b;
+                                Bus3.c  =  Bus3.c;
+                2'b11:
+                                Bus3.a  =  Bus4.a;
+                                Bus3.b  =  Bus4.b;
+                                Bus3.c  =  Bus4.c;
+        endcase
+end
+
+Parsing input file for interface: myBus
+assign  Bus3.a  =  sel ? Bus1.a : Bus2.a;
+assign  Bus3.b  =  sel ? Bus1.b : Bus2.b;
+assign  Bus3.c  =  sel ? Bus1.c : Bus2.c;
