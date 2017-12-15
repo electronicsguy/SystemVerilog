@@ -2,6 +2,9 @@
 # Sujay Phadke (C) 2017
 #
 # Perl script to assign individual nets of an interface, from an input instance to output
+#
+# Usage:
+# ./InterfaceMux.pl interfaces.sv Bus3 "Bus1,Bus2,Bus3,Bus4" sel "2'b00,2'b01,2'b10,2'b11" 1 myBus
 
 use strict;
 use warnings;
